@@ -1,0 +1,86 @@
+version: '3.4'
+services:
+  confluence:
+    build:
+      context: ./confluence
+      dockerfile: Dockerfile.arm
+    container_name: confluence-srv
+    environment:
+      - TZ='Asia/Ho_Chi_Minh'
+    depends_on:
+      - confluencedb
+    ports:
+      - "8090:8090"
+    volumes:
+      - confluence_data:/var/confluence
+      - confluence_core:/opt/confluence
+      - ./confluence/server.xml:/opt/confluence/conf/server.xml
+    restart: always
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8090"]
+      interval: 1m30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - network-bridge
+  jira:
+    build:
+      context: ./Jira
+      dockerfile: Dockerfile.arm
+    container_name: jira-srv
+    environment:
+      - TZ='Asia/Ho_Chi_Minh'
+    depends_on:
+      - jiradb
+    ports:
+      - "8080:8080"
+    volumes:
+      - jira_data:/var/jira
+      - jira_core:/opt/jira
+      - ./Jira/server.xml:/opt/jira/conf/server.xml
+    restart: always
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080"]
+      interval: 1m30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - network-bridge
+  confluencedb:
+    image: postgres:14
+    container_name: postgresql-confluence
+    env_file:
+      - database-confluence.env
+    # ports:
+    #   - "5432:5432"
+    volumes:
+      - database-confluence:/var/lib/postgresql/data/
+    restart: always
+    networks:
+      - network-bridge
+  jiradb:
+    image: postgres:13
+    container_name: postgresql-jira
+    env_file:
+      - database-jira.env
+    # ports:
+    #   - "5432:5432"
+    volumes:
+      - database-jiradb:/var/lib/postgresql/data/
+    restart: always
+    networks:
+      - network-bridge
+
+networks:
+  network-bridge:
+    driver: bridge
+volumes:
+  jira_data:
+    external: false
+  database-confluence:
+  database-jiradb:
+  confluence_data:
+  confluence_core:
+  jira_core:
