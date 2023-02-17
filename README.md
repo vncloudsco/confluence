@@ -15,9 +15,6 @@ Bảng giá
 | Crack Plugin  | 200k/lần     | Cài đặt và kích hoạt plugin không giới hạn user |
 
 
-
-Đối với các bạn có nhu cầu sử dụng Jira Service Management, crowd để làm việc thì phải dùng docker build hiện tại mình chưa up được image lên docker hub nên sẽ không dùng được cách chạy thẳng
-
 Để dùng được phần mềm thì bạn cần phải cài Docker và docker-compose trên máy trước khi bắt đầu quá trình cài đặt Jira vs Confluence
 
  
