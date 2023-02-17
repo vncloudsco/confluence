@@ -20,7 +20,7 @@ Bảng giá
 
 Để dùng được phần mềm thì bạn cần phải cài Docker và docker-compose trên máy trước khi bắt đầu quá trình cài đặt Jira vs Confluence
 
-``` 
+ 
 ### Build image
 
 #### Build image & run cho x86_64
