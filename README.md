@@ -12,7 +12,7 @@ Bảng giá
 | Công Việc     | Giá        | Nghi Chú |
 | ------------  | ----------- | ------- |
 | Cài đặt       |    500k/lần  | Cài đặt phần mềm + crack không giới hạn user |
-| Crack Plugin  | 200k/lần     | Cài đặt và kích hoạt plugin không giới hạn user |
+| Crack Plugin  | 200k/plugin     | Cài đặt và kích hoạt plugin không giới hạn user |
 
 
 Để dùng được phần mềm thì bạn cần phải cài Docker và docker-compose trên máy trước khi bắt đầu quá trình cài đặt Jira vs Confluence
