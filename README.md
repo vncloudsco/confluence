@@ -13,7 +13,7 @@ Email: contact@connect.manhtuong.net
 
 Bảng giá
 
-| Công Việc     | Giá        | Nghi Chú |
+| Công Việc     | Giá        | Ghi Chú |
 | ------------  | ----------- | ------- |
 | Cài đặt       |    500k/lần  | Cài đặt phần mềm + crack không giới hạn user |
 | Crack Plugin  | 200k/plugin     | Cài đặt và kích hoạt plugin không giới hạn user |
