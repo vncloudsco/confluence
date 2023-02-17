@@ -3,9 +3,13 @@
 Đây là bản mới nhất của jira và confluence đã được cấu hình hoàn chỉnh các bạn cần mua key để được sử dụng
 
 Mua key sử dụng  liên hệ qua 
+
 Telegram: [@vouuvhb](https://t.me/vouuvhb)
+
 Facebook: [fb.me/vouuvhb](https://fb.me/vouuvhb)
+
 Email: contact@connect.manhtuong.net
+
 
 Bảng giá
 
