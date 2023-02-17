@@ -16,12 +16,12 @@ ENV JIRA_USER=jira \
     AGENT_FILENAME=atlassian-agent.jar
 ENV JAVA_OPTS="-javaagent:${AGENT_PATH}/${AGENT_FILENAME} ${JAVA_OPTS}"
 RUN mkdir -p ${JIRA_INSTALL} ${JIRA_HOME} ${AGENT_PATH} \
-&& curl -o ${AGENT_PATH}/${AGENT_FILENAME}  https://github.com/vncloudsco/agent/releases/download/V${AGENT_VERSION}/atlassian-agent.jar -L \
 && curl -o /tmp/atlassian.tar.gz https://product-downloads.atlassian.com/software/crowd/downloads/atlassian-${JIRA_PRODUCT}-${JIRA_VERSION}.tar.gz -L \
 && tar xzf /tmp/atlassian.tar.gz -C ${JIRA_INSTALL}/ --strip-components 1 \
 && rm -f /tmp/atlassian.tar.gz \
 && curl -o ${JIRA_INSTALL}/apache-tomcat/lib/mysql-connector-java-${MYSQL_DRIVER_VERSION}.jar https://repo1.maven.org/maven2/mysql/mysql-connector-java/${MYSQL_DRIVER_VERSION}/mysql-connector-java-${MYSQL_DRIVER_VERSION}.jar -L \
 && echo "crowd.home = ${JIRA_HOME}" > ${JIRA_INSTALL}/crowd-webapp/WEB-INF/classes/crowd-init.properties
+ADD agent.jar /var/agent/atlassian-agent.jar
 RUN export CONTAINER_USER=$JIRA_USER \
 && export CONTAINER_GROUP=$JIRA_GROUP \
 && groupadd -r $JIRA_GROUP && useradd -r -g $JIRA_GROUP $JIRA_USER \
