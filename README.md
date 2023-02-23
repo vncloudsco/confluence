@@ -27,7 +27,7 @@ Bảng giá
 #### Build image & run cho x86_64
 
 ```
-git clone https://github.com/vncloudsco/confluence-jira.git
+git clone https://github.com/vncloudsco/confluence.git
 cd confluence-jira
 docker-compose -f docker-compose-build.yaml build
 docker-compose -f docker-compose-build.yaml up -d
@@ -35,7 +35,7 @@ docker-compose -f docker-compose-build.yaml up -d
 #### Build image & run cho ARM
 
 ```
-git clone https://github.com/vncloudsco/confluence-jira.git
+git clone https://github.com/vncloudsco/confluence.git
 cd confluence-jira
 docker-compose -f docker-compose-build-arm.yaml build
 docker-compose -f docker-compose-build-arm.yaml up -d 
