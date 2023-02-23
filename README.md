@@ -28,7 +28,7 @@ Bảng giá
 
 ```
 git clone https://github.com/vncloudsco/confluence.git
-cd confluence-jira
+cd confluence
 docker-compose -f docker-compose-build.yaml build
 docker-compose -f docker-compose-build.yaml up -d
 ``` 
@@ -36,7 +36,7 @@ docker-compose -f docker-compose-build.yaml up -d
 
 ```
 git clone https://github.com/vncloudsco/confluence.git
-cd confluence-jira
+cd confluence
 docker-compose -f docker-compose-build-arm.yaml build
 docker-compose -f docker-compose-build-arm.yaml up -d 
 ``` 

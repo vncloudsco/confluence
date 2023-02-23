@@ -18,6 +18,6 @@ sudo curl -L https://github.com/docker/compose/releases/download/${VERSION}/dock
 sudo chmod 755 $DESTINATION
 
 git clone https://github.com/vncloudsco/confluence.git
-cd confluence-jira
+cd confluence
 docker-compose -f docker-compose-build.yaml build
 docker-compose -f docker-compose-build.yaml up -d
