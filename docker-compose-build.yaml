@@ -39,6 +39,7 @@ services:
       - jira_data:/var/jira
       - jira_core:/opt/jira
       - ./Jira/server.xml:/opt/jira/conf/server.xml
+      - ./Jira/dbconfig.xml:/var/jira/dbconfig.xml
     restart: always
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8080"]
