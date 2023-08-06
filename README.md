@@ -83,4 +83,4 @@ Phiên bản hỗ trợ
 
 ### sửa lỗi không lưu được bài trên confluence arm
 
-Đầu tiên truy cập vào General Configuration  >  Collaborative editing trong cài đặt chuyển Collaborative editing của Editing mode về thành off. Quay lại trang chủ bạn có thể đăng bài bình thường tuy nhiên sẽ mất tính năng autosvae, các bạn phải thao tác lưu thủ công
+Đầu tiên truy cập vào General Configuration  >  Collaborative editing trong cài đặt chuyển Collaborative editing của Editing mode về thành off. Quay lại trang chủ bạn có thể đăng bài bình thường tuy nhiên sẽ mất tính năng autosvae, các bạn phải thao tác lưu thủ công!
